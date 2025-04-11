@@ -194,6 +194,29 @@
   }
 </style>
 
+
+<style>
+  .profile-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hover-info {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .profile-wrapper:hover .hover-info {
+    opacity: 1;
+    max-height: 500px;
+    margin-top: 10px;
+  }
+</style>
+
 </head>
 <body>
 
