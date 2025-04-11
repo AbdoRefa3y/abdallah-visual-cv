@@ -108,6 +108,52 @@
       }
     }
   </style>
+
+<style>
+  .profile-wrapper {
+    position: relative;
+    width: 130px;
+    margin: 0 auto;
+  }
+  .profile-wrapper img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    transition: 0.3s all ease;
+  }
+  .profile-wrapper:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  .profile-hover-info {
+    display: none;
+    position: absolute;
+    top: 140px;
+    width: 280px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fdfdfd;
+    padding: 10px;
+    font-size: 13px;
+    color: #333;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    z-index: 99;
+  }
+  .profile-wrapper:hover .profile-hover-info {
+    display: block;
+  }
+  .profile-hover-info span {
+    background: #eee;
+    padding: 4px 10px;
+    margin: 4px;
+    border-radius: 12px;
+    display: inline-block;
+  }
+</style>
 </head>
 <body>
 
@@ -126,7 +172,21 @@
   <div class="header">
     <h1>عبدالله رفاعي</h1>
     <p>طالب نظم معلومات إدارية</p>
-    <img src="profile.jpg" alt="عبدالله">
+    
+<div class="profile-wrapper">
+  <img src="profile.jpg" alt="عبدالله">
+  <div class="profile-hover-info">
+    <strong style="color:#f0c040;">💼 طالب نظم معلومات إدارية</strong>
+    <p style="font-style: italic; color:#777;">"هدفي أن أترك أثرًا جميلًا في كل تجربة أشارك فيها"</p>
+    <div>
+      <span>📈 منظم</span>
+      <span>🤝 اجتماعي</span>
+      <span>⚡ سريع التعلم</span>
+      <span>💡 مبادر</span>
+    </div>
+  </div>
+</div>
+
 <p style="margin-top:10px; font-size:18px; color:#f0c040;">💼 طالب نظم معلومات إدارية</p>
 <p style="font-style: italic; color:#aaa; font-size:15px;">"هدفي أن أترك أثرًا جميلًا في كل تجربة أشارك فيها"</p>
 <div style="margin-top:10px; font-size:14px; display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
@@ -195,7 +255,21 @@
   <div class="header">
     <h1>Abdallah Refai</h1>
     <p>MIS Student</p>
-    <img src="profile.jpg" alt="Abdallah's Photo">
+    
+<div class="profile-wrapper">
+  <img src="profile.jpg" alt="Abdallah's Photo">
+  <div class="profile-hover-info">
+    <strong style="color:#f0c040;">💼 MIS Student</strong>
+    <p style="font-style: italic; color:#777;">"I strive to leave a beautiful impact in every experience I join."</p>
+    <div>
+      <span>📈 Organized</span>
+      <span>🤝 Social</span>
+      <span>⚡ Fast Learner</span>
+      <span>💡 Proactive</span>
+    </div>
+  </div>
+</div>
+
 <p style="margin-top:10px; font-size:18px; color:#f0c040;">💼 MIS Student</p>
 <p style="font-style: italic; color:#aaa; font-size:15px;">"I strive to leave a beautiful impact in every experience I join."</p>
 <div style="margin-top:10px; font-size:14px; display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
