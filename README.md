@@ -1,1 +1,0 @@
-# abdallah-visual-cv
