@@ -21,7 +21,7 @@
       padding: 30px 20px 100px;
       position: relative;
     }
-    .header img {
+    .header img:hover {transform: scale(1.05); box-shadow: 0 4px 10px rgba(0,0,0,0.3);} .header img { transition: 0.3s all ease;
       width: 130px;
       height: 130px;
       border-radius: 50%;
@@ -97,7 +97,7 @@
         width: 100%;
         padding: 20px;
       }
-      .header img {
+      .header img:hover {transform: scale(1.05); box-shadow: 0 4px 10px rgba(0,0,0,0.3);} .header img { transition: 0.3s all ease;
         width: 100px;
         height: 100px;
         bottom: -50px;
@@ -107,7 +107,10 @@
 </head>
 <body>
 
-<div class="header">
+
+    <button onclick="toggleLang()" style="position:absolute;top:10px;left:10px;background:#d4af37;color:white;padding:6px 16px;border:none;border-radius:5px;font-weight:bold;cursor:pointer;">English</button>
+    <div class="header">
+    
   <h1>عبدالله رفاعي</h1>
   <p>طالب جامعي</p>
   <img src="profile.jpg" alt="صورة عبدالله">
@@ -172,10 +175,44 @@
       <a href="https://www.linkedin.com/in/abdollahrefaey" target="_blank" style="color:#0a66c2;font-weight:bold;">🔗 لينكدإن: abdollahrefaey</a>
       <div style="margin-top:20px;"><img src="qr.png" alt="QR Code" style="width:100px;height:100px;"></div>
     </section>
+    
+    <section style="text-align:center; margin-top: 40px;">
+      <p style="margin: 0; font-weight:bold; color:#444;">🌟 قيمتي المضافة:</p>
+      <p style="margin: 5px 0;">أنا مش بس طالب نظم معلومات، أنا شخص بيجمع بين الفهم العملي والذكاء الاجتماعي في التعامل مع أي بيئة عمل.</p>
+
+      <p style="margin-top:20px;font-style:italic;color:#666;">"أسعى إن كل خطوة أكون فيها نسخة أفضل من نفسي."</p>
+
+      <div style="margin-top: 20px;">
+        <a href="Abdallah_Refai_CV.pdf" download style="display:inline-block;background:#d4af37;color:white;padding:10px 20px;text-decoration:none;border-radius:6px;">📥 تحميل CV بالعربية</a>
+        <a href="Abdallah_Refai_CV_EN.pdf" download style="display:inline-block;background:#333;color:white;padding:10px 20px;text-decoration:none;border-radius:6px;margin-right:10px;">📥 Download CV in English</a>
+      </div>
+
+      <div style="margin-top:20px;">
+        <a href="https://goo.gl/maps/fZuGuFA4NkV28PZT9" target="_blank" style="color:#2c2c2c; font-weight:bold;">📍 الزيتون، القاهرة (افتح على الخريطة)</a>
+      </div>
+
+      <div style="margin-top:20px;">
+        <img src="qr.png" alt="QR Code" style="width:100px;height:100px;">
+      </div>
+    </section>
     <footer>
+      <p>© عبدالله رفاعي - التصميم بحب ❤️</p>
+      <p>آخر تحديث: April 2025</p>
+
 
   &copy; 2025 عبدالله رفاعي - جميع الحقوق محفوظة
 </footer>
 
+</body>
+</html>
+
+<script>
+  function toggleLang() {
+    const arabic = document.body.dir === 'rtl';
+    document.body.dir = arabic ? 'ltr' : 'rtl';
+    document.documentElement.lang = arabic ? 'en' : 'ar';
+    document.querySelector('button').textContent = arabic ? 'العربية' : 'English';
+  }
+</script>
 </body>
 </html>
