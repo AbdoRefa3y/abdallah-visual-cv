@@ -106,26 +106,19 @@
   </style>
 </head>
 <body>
-<div style="position:absolute;top:10px;left:10px;right:10px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;z-index:999;">
+<div style="position:fixed;top:0;left:0;right:0;z-index:999;background:#fdfdfd;border-bottom:1px solid #ddd;padding:10px;display:flex;justify-content:center;flex-wrap:wrap;gap:10px;">
   <button onclick="toggleLang()" style="background:#d4af37;color:white;padding:6px 16px;border:none;border-radius:5px;font-weight:bold;cursor:pointer;">English</button>
   <a href="Abdallah_Refai_CV.pdf" download style="background:#3e3e3e;color:white;padding:6px 12px;border-radius:5px;text-decoration:none;">📄 CV عربي</a>
   <a href="Abdallah_Refai_CV_EN.pdf" download style="background:#333;color:white;padding:6px 12px;border-radius:5px;text-decoration:none;">📄 CV إنجليزي</a>
   <a href="https://www.linkedin.com/in/abdollah-refaey-0344b8319" target="_blank" style="background:#0a66c2;color:white;padding:6px 12px;border-radius:5px;text-decoration:none;">🔗 LinkedIn</a>
-  <img src="qr.png" alt="QR" style="height:40px;width:40px;border-radius:4px;">
+  <img src="qr.png" alt="QR" style="height:36px;width:36px;border-radius:4px;">
 </div>
+<div style="height:70px;"></div> <!-- Spacer after fixed top bar -->
 
 
 
     <button onclick="toggleLang()" style="position:absolute;top:10px;left:10px;background:#d4af37;color:white;padding:6px 16px;border:none;border-radius:5px;font-weight:bold;cursor:pointer;">English</button>
-    <button onclick="toggleLang()" style="position:absolute;top:10px;left:10px;background:#d4af37;color:white;padding:6px 16px;border:none;border-radius:5px;font-weight:bold;cursor:pointer;">English</button><div id="arabic">
-<div style="position:absolute;top:10px;left:10px;display:flex;gap:10px;flex-wrap:wrap;">
-  <button onclick="toggleLang()" style="background:#d4af37;color:white;padding:6px 16px;border:none;border-radius:5px;font-weight:bold;cursor:pointer;">English</button>
-  <a href="Abdallah_Refai_CV.pdf" download style="background:#3e3e3e;color:white;padding:6px 12px;border-radius:5px;text-decoration:none;">📄 CV عربي</a>
-  <a href="Abdallah_Refai_CV_EN.pdf" download style="background:#333;color:white;padding:6px 12px;border-radius:5px;text-decoration:none;">📄 CV إنجليزي</a>
-  <a href="https://www.linkedin.com/in/abdollah-refaey-0344b8319" target="_blank" style="background:#0a66c2;color:white;padding:6px 12px;border-radius:5px;text-decoration:none;">🔗 LinkedIn</a>
-  <img src="qr.png" alt="QR" style="height:40px;width:40px;border-radius:4px;">
-</div>
-<div id="arabic"><div class="header">
+    <button onclick="toggleLang()" style="position:absolute;top:10px;left:10px;background:#d4af37;color:white;padding:6px 16px;border:none;border-radius:5px;font-weight:bold;cursor:pointer;">English</button><div id="arabic"><div class="header">
     
   <h1>عبدالله رفاعي</h1>
   <p>طالب جامعي</p>
@@ -221,15 +214,7 @@
 
 
 <div id="english" style="display:none; direction:ltr; font-family: 'Roboto', sans-serif;">
-  
-<div style="position:absolute;top:10px;left:10px;display:flex;gap:10px;flex-wrap:wrap;">
-  <button onclick="toggleLang()" style="background:#d4af37;color:white;padding:6px 16px;border:none;border-radius:5px;font-weight:bold;cursor:pointer;">English</button>
-  <a href="Abdallah_Refai_CV.pdf" download style="background:#3e3e3e;color:white;padding:6px 12px;border-radius:5px;text-decoration:none;">📄 CV عربي</a>
-  <a href="Abdallah_Refai_CV_EN.pdf" download style="background:#333;color:white;padding:6px 12px;border-radius:5px;text-decoration:none;">📄 CV إنجليزي</a>
-  <a href="https://www.linkedin.com/in/abdollah-refaey-0344b8319" target="_blank" style="background:#0a66c2;color:white;padding:6px 12px;border-radius:5px;text-decoration:none;">🔗 LinkedIn</a>
-  <img src="qr.png" alt="QR" style="height:40px;width:40px;border-radius:4px;">
-</div>
-<div id="arabic"><div class="header">
+  <div class="header">
     <h1>Abdallah Refai</h1>
     <p>MIS Student</p>
     <img src="profile.jpg" alt="Abdallah's Photo">
@@ -310,7 +295,36 @@
     }
   }
 </script>
+
+<script>
+  function toggleLang() {
+    var ar = document.getElementById("arabic");
+    var en = document.getElementById("english");
+    var btn = document.querySelector("button");
+    if (ar.style.display === "none") {
+      ar.style.display = "block";
+      en.style.display = "none";
+      document.body.dir = "rtl";
+      document.documentElement.lang = "ar";
+      btn.textContent = "English";
+    } else {
+      ar.style.display = "none";
+      en.style.display = "block";
+      document.body.dir = "ltr";
+      document.documentElement.lang = "en";
+      btn.textContent = "العربية";
+    }
+  }
+
+  // تأكيد بدء الصفحة بالعربية
+  window.onload = () => {
+    document.getElementById("arabic").style.display = "block";
+    document.getElementById("english").style.display = "none";
+  };
+</script>
 </body>
+</html>
+
 </html>
 
 <script>
@@ -323,15 +337,7 @@
 </script>
 
 <div id="english" style="display:none; direction:ltr; font-family: 'Roboto', sans-serif;">
-  
-<div style="position:absolute;top:10px;left:10px;display:flex;gap:10px;flex-wrap:wrap;">
-  <button onclick="toggleLang()" style="background:#d4af37;color:white;padding:6px 16px;border:none;border-radius:5px;font-weight:bold;cursor:pointer;">English</button>
-  <a href="Abdallah_Refai_CV.pdf" download style="background:#3e3e3e;color:white;padding:6px 12px;border-radius:5px;text-decoration:none;">📄 CV عربي</a>
-  <a href="Abdallah_Refai_CV_EN.pdf" download style="background:#333;color:white;padding:6px 12px;border-radius:5px;text-decoration:none;">📄 CV إنجليزي</a>
-  <a href="https://www.linkedin.com/in/abdollah-refaey-0344b8319" target="_blank" style="background:#0a66c2;color:white;padding:6px 12px;border-radius:5px;text-decoration:none;">🔗 LinkedIn</a>
-  <img src="qr.png" alt="QR" style="height:40px;width:40px;border-radius:4px;">
-</div>
-<div id="arabic"><div class="header">
+  <div class="header">
     <h1>Abdallah Refai</h1>
     <p>MIS Student</p>
     <img src="profile.jpg" alt="Abdallah's Photo">
@@ -412,5 +418,34 @@
     }
   }
 </script>
+
+<script>
+  function toggleLang() {
+    var ar = document.getElementById("arabic");
+    var en = document.getElementById("english");
+    var btn = document.querySelector("button");
+    if (ar.style.display === "none") {
+      ar.style.display = "block";
+      en.style.display = "none";
+      document.body.dir = "rtl";
+      document.documentElement.lang = "ar";
+      btn.textContent = "English";
+    } else {
+      ar.style.display = "none";
+      en.style.display = "block";
+      document.body.dir = "ltr";
+      document.documentElement.lang = "en";
+      btn.textContent = "العربية";
+    }
+  }
+
+  // تأكيد بدء الصفحة بالعربية
+  window.onload = () => {
+    document.getElementById("arabic").style.display = "block";
+    document.getElementById("english").style.display = "none";
+  };
+</script>
 </body>
+</html>
+
 </html>
