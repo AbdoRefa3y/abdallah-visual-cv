@@ -109,7 +109,7 @@
 
 
     <button onclick="toggleLang()" style="position:absolute;top:10px;left:10px;background:#d4af37;color:white;padding:6px 16px;border:none;border-radius:5px;font-weight:bold;cursor:pointer;">English</button>
-    <div class="header">
+    <button onclick="toggleLang()" style="position:absolute;top:10px;left:10px;background:#d4af37;color:white;padding:6px 16px;border:none;border-radius:5px;font-weight:bold;cursor:pointer;">English</button><div id="arabic"><div class="header">
     
   <h1>عبدالله رفاعي</h1>
   <p>طالب جامعي</p>
@@ -203,6 +203,89 @@
   &copy; 2025 عبدالله رفاعي - جميع الحقوق محفوظة
 </footer>
 
+
+<div id="english" style="display:none; direction:ltr; font-family: 'Roboto', sans-serif;">
+  <div class="header">
+    <h1>Abdallah Refai</h1>
+    <p>MIS Student</p>
+    <img src="profile.jpg" alt="Abdallah's Photo">
+  </div>
+
+  <div class="container">
+    <div class="left">
+      <h2>About Me</h2>
+      <p>Second-year student at Cairo Institute of Management Information Systems. I have real-world experience in sales and advertising, with a strong ability to learn quickly, stay organized, and perform well under pressure.</p>
+
+      <h2>Work Experience</h2>
+      <ul>
+        <li><strong>Sales Representative (2021 – 2023):</strong><br>Direct customer interaction and performance under pressure.</li>
+        <li><strong>Advertising Assistant (2023 – Present):</strong><br>Assisting in internal coordination and marketing execution.</li>
+      </ul>
+
+      <h2>Personal Traits</h2>
+      <div class="skills-icons">
+        <div>📖<br>Reading</div>
+        <div>🎯<br>Self-Development</div>
+        <div>💻<br>Online Learning</div>
+        <div>⏰<br>Time Management</div>
+        <div>💬<br>Effective Communication</div>
+      </div>
+    </div>
+
+    <div class="right">
+      <h2>Education</h2>
+      <ul>
+        <li>Cairo New Institute</li>
+        <li>2nd Year</li>
+        <li>Management Information Systems</li>
+      </ul>
+
+      <h2>Skills</h2>
+      <ul>
+        <li>Customer Service & Persuasion</li>
+        <li>Quick Learning & Adaptability</li>
+        <li>Basic Marketing Knowledge</li>
+        <li>Resilience Under Pressure</li>
+      </ul>
+
+      <h2>Languages</h2>
+      <ul>
+        <li>Arabic: Fluent</li>
+        <li>English: Intermediate</li>
+        <li>French: Beginner</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <ul style="line-height:1.8;">
+        <li>📧 2Abdoelsayed7@gmail.com</li>
+        <li>📱 01011738431</li>
+        <li>📍 <a href="https://goo.gl/maps/fZuGuFA4NkV28PZT9" target="_blank">Zeitoun, Cairo (View on Map)</a></li>
+        <li>🔗 <a href="https://www.linkedin.com/in/abdollahrefaey" target="_blank">LinkedIn Profile</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleLang() {
+    const ar = document.getElementById("arabic");
+    const en = document.getElementById("english");
+    const btn = document.querySelector('button');
+    if (ar.style.display === "none") {
+      ar.style.display = "block";
+      en.style.display = "none";
+      document.body.dir = "rtl";
+      document.documentElement.lang = "ar";
+      btn.textContent = "English";
+    } else {
+      ar.style.display = "none";
+      en.style.display = "block";
+      document.body.dir = "ltr";
+      document.documentElement.lang = "en";
+      btn.textContent = "العربية";
+    }
+  }
+</script>
 </body>
 </html>
 
@@ -212,6 +295,89 @@
     document.body.dir = arabic ? 'ltr' : 'rtl';
     document.documentElement.lang = arabic ? 'en' : 'ar';
     document.querySelector('button').textContent = arabic ? 'العربية' : 'English';
+  }
+</script>
+
+<div id="english" style="display:none; direction:ltr; font-family: 'Roboto', sans-serif;">
+  <div class="header">
+    <h1>Abdallah Refai</h1>
+    <p>MIS Student</p>
+    <img src="profile.jpg" alt="Abdallah's Photo">
+  </div>
+
+  <div class="container">
+    <div class="left">
+      <h2>About Me</h2>
+      <p>Second-year student at Cairo Institute of Management Information Systems. I have real-world experience in sales and advertising, with a strong ability to learn quickly, stay organized, and perform well under pressure.</p>
+
+      <h2>Work Experience</h2>
+      <ul>
+        <li><strong>Sales Representative (2021 – 2023):</strong><br>Direct customer interaction and performance under pressure.</li>
+        <li><strong>Advertising Assistant (2023 – Present):</strong><br>Assisting in internal coordination and marketing execution.</li>
+      </ul>
+
+      <h2>Personal Traits</h2>
+      <div class="skills-icons">
+        <div>📖<br>Reading</div>
+        <div>🎯<br>Self-Development</div>
+        <div>💻<br>Online Learning</div>
+        <div>⏰<br>Time Management</div>
+        <div>💬<br>Effective Communication</div>
+      </div>
+    </div>
+
+    <div class="right">
+      <h2>Education</h2>
+      <ul>
+        <li>Cairo New Institute</li>
+        <li>2nd Year</li>
+        <li>Management Information Systems</li>
+      </ul>
+
+      <h2>Skills</h2>
+      <ul>
+        <li>Customer Service & Persuasion</li>
+        <li>Quick Learning & Adaptability</li>
+        <li>Basic Marketing Knowledge</li>
+        <li>Resilience Under Pressure</li>
+      </ul>
+
+      <h2>Languages</h2>
+      <ul>
+        <li>Arabic: Fluent</li>
+        <li>English: Intermediate</li>
+        <li>French: Beginner</li>
+      </ul>
+
+      <h2>Contact</h2>
+      <ul style="line-height:1.8;">
+        <li>📧 2Abdoelsayed7@gmail.com</li>
+        <li>📱 01011738431</li>
+        <li>📍 <a href="https://goo.gl/maps/fZuGuFA4NkV28PZT9" target="_blank">Zeitoun, Cairo (View on Map)</a></li>
+        <li>🔗 <a href="https://www.linkedin.com/in/abdollahrefaey" target="_blank">LinkedIn Profile</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleLang() {
+    const ar = document.getElementById("arabic");
+    const en = document.getElementById("english");
+    const btn = document.querySelector('button');
+    if (ar.style.display === "none") {
+      ar.style.display = "block";
+      en.style.display = "none";
+      document.body.dir = "rtl";
+      document.documentElement.lang = "ar";
+      btn.textContent = "English";
+    } else {
+      ar.style.display = "none";
+      en.style.display = "block";
+      document.body.dir = "ltr";
+      document.documentElement.lang = "en";
+      btn.textContent = "العربية";
+    }
   }
 </script>
 </body>
